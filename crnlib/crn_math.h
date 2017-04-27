@@ -56,6 +56,7 @@ namespace crnlib
 
       template<typename T> inline T square(T value) { return value * value; }
 
+      inline bool is_power_of_2(size_t x) { return x && ((x & (x - 1U)) == 0U); }
       inline bool is_power_of_2(uint32 x) { return x && ((x & (x - 1U)) == 0U); }
       inline bool is_power_of_2(uint64 x) { return x && ((x & (x - 1U)) == 0U); }
 
