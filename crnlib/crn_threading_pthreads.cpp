@@ -28,9 +28,9 @@ namespace crnlib
 #ifdef WIN32
       SYSTEM_INFO g_system_info;
       GetSystemInfo(&g_system_info);
-      g_number_of_processors = math::maximum<uint>(1U, g_system_info.dwNumberOfProcessors);
+      g_number_of_processors = math::minimum<uint>(16U, math::maximum<uint>(1U, g_system_info.dwNumberOfProcessors));
 #elif defined(__GNUC__)
-      g_number_of_processors = math::maximum<int>(1, get_nprocs());
+      g_number_of_processors = math::minimum<int>(16, math::maximum<int>(1, get_nprocs()));
 #else
       g_number_of_processors = 1;
 #endif
