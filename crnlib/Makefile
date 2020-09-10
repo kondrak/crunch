@@ -95,4 +95,4 @@ crunch: $(OBJECTS) crunch.o corpus_gen.o corpus_test.o
 	g++ $(OBJECTS) crunch.o corpus_gen.o corpus_test.o -o crunch $(COMPILE_OPTIONS) $(LINKER_OPTIONS)
 
 clean:
-	rm -f $(OBJECTS) corpus_gen.o corpus_test.o crunch
+	rm -f $(OBJECTS) corpus_gen.o corpus_test.o crunch.o crunch
