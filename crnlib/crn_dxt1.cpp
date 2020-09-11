@@ -39,7 +39,8 @@ namespace crnlib
       m_pSolutions(NULL),
       m_perceptual(false),
       m_has_color_weighting(false),
-      m_all_pixels_grayscale(false)
+      m_all_pixels_grayscale(false),
+      m_num_prev_results(0)
    {
       m_low_coords.reserve(512);
       m_high_coords.reserve(512);
@@ -86,6 +87,7 @@ namespace crnlib
       m_all_pixels_grayscale = false;
       m_has_color_weighting = false;
       m_perceptual = false;
+      m_num_prev_results = 0;
    }
 
    bool dxt1_endpoint_optimizer::handle_all_transparent_block()
